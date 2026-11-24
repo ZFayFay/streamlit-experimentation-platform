@@ -1,7 +1,8 @@
 """Pure functions copied verbatim from the 2025 app (ab_testing_implementation_3.py), without Streamlit."""
 import re, numpy as np, pandas as pd, scipy.stats as stats
 from datetime import datetime
-_src = open('' + __import__('os').path.join(__import__('os').path.dirname(__file__), '..', 'ab_testing_implementation_3.py') + '').read()
+import os
+_src = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), 'app_2025.py')).read()
 _ns = {'np': np, 'pd': pd, 'stats': stats, 'datetime': datetime, 'Dict': dict, 'List': list}
 for _n in ['generate_synthetic_data', 'calculate_frequentist_results', 'design_binomial_experiment']:
     exec(re.search(r'(def ' + _n + r'\(.*?)(?=\n(?:def |@|class |# ---))', _src, re.S).group(1), _ns)

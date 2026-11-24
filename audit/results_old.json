@@ -1,0 +1,72 @@
+{
+  "H1": {
+    "runs": 500,
+    "fpr": 0.376,
+    "ci": [
+      0.3346,
+      0.4193
+    ],
+    "pass": false
+  },
+  "H2": {
+    "runs": 2000,
+    "fpr_any_look": 0.1935,
+    "ci": [
+      0.1768,
+      0.2114
+    ],
+    "fpr_final_look_only": 0.0485,
+    "pass": false
+  },
+  "H3": {
+    "runs": 5000,
+    "nominal_one_sided": 0.025,
+    "of_fpr": 0.0318,
+    "of_ci": [
+      0.0273,
+      0.037
+    ],
+    "pocock_fpr": 0.016,
+    "pocock_ci": [
+      0.0129,
+      0.0199
+    ],
+    "naive_fpr": 0.0682,
+    "of_boundaries": [
+      4.383,
+      3.099,
+      2.53,
+      2.191,
+      1.96
+    ],
+    "pocock_boundary": 2.576,
+    "pass_a": false,
+    "pass_b": false
+  },
+  "H4a": {
+    "runs": 200,
+    "mean_variance_reduction": 0.0031035577136769694,
+    "pass": false
+  },
+  "H4b": {
+    "runs": 1000,
+    "lift_points": 0.5,
+    "power": {
+      "raw": 0.373,
+      "app": 0.355,
+      "correct": 0.448
+    },
+    "mean_variance_reduction": 0.21185950014607197,
+    "corr_pre_outcome": 0.46011125429762306,
+    "pass": false
+  },
+  "H5": {
+    "runs": 500,
+    "power": 0.966,
+    "ci": [
+      0.9462,
+      0.9787
+    ],
+    "pass": true
+  }
+}

@@ -33,3 +33,9 @@ After the audit I will rebuild the app. V1 to V5 are the same checks run on v2, 
 ## Reporting
 
 Every result is reported, pass or fail, in the post and in `audit/results.json`. Any change to this plan after the first run is listed as a deviation.
+
+## Deviations (added after the runs)
+
+1. The first run of `audit_v2.py` crashed in the V4b block on a pandas indexing error (`pvalues[1]` instead of `pvalues.iloc[1]`). I fixed the line and reran every block from scratch with the same seeds and settings. No rule or setting changed.
+2. For V4b the "correct analysis" reference is a regression adjustment with robust (HC2) standard errors, because v2's own CUPED test is now the Welch t-test I used as the reference for H4b. Same idea, an independent implementation.
+3. Results are in `results_old.json` (the 2025 app) and `results_v2.json` (version 2) instead of one `results.json`.
