@@ -11,7 +11,7 @@ import streamlit as st
 
 import experiments as E
 
-POST_URL = "https://medium.com/@faycal.zouine.usa"
+POST_URL = "https://medium.com/@faycal.zouine.usa/i-tested-my-own-a-b-testing-app-it-found-a-winner-in-38-of-tests-where-nothing-changed-d4b3a00ac9e6"
 REPO_URL = "https://github.com/ZFayFay/streamlit-experimentation-platform"
 BLUE, ORANGE, GREY = "#2563eb", "#ea580c", "#6b7280"
 

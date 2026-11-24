@@ -25,7 +25,7 @@ Before running anything, I wrote down a rule for each tab and committed it to gi
 
 The first check was the simplest. With the true lift set to zero, both groups get the same experience, so a test at the 5% level should declare a winner about 5% of the time. The app's A/A tab did it 37.6% of the time, across 500 runs.
 
-The cause was one line. To give the HTE tab something to find, I made the effect stronger for younger users by adding (40 - age) / 1,000 to the treatment group. The average user is 35, so that line adds about half a point of conversion to the treatment group in every simulation, even when the lift slider says zero. On a 5% base rate, that's a 10% lift that nobody asked for.
+The cause was one line. To give the HTE tab something to find, I made the effect stronger for younger users by adding (40 minus age) / 1,000 to the treatment group. The average user is 35, so that line adds about half a point of conversion to the treatment group in every simulation, even when the lift slider says zero. On a 5% base rate, that's a 10% lift that nobody asked for.
 
 That bug also decides the old post. Every dataset the app could generate had a real effect of about half a point or more. The post's "high-confidence" decision to kill the feature was wrong inside the app's own world.
 

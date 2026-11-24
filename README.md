@@ -2,7 +2,8 @@
 
 A Streamlit app that runs A/B test methods on simulated data where the true effect is known, so you can check each method instead of trusting it.
 
-**Live app:** https://app-experimentation-platform-p4mcqhkrtw5q3f72yr2wrw.streamlit.app/
+**Live app:** https://app-experimentation-platform-p4mcqhkrtw5q3f72yr2wrw.streamlit.app/  
+**The story:** [I tested my own A/B testing app. It found a winner in 38% of tests where nothing changed.](https://medium.com/@faycal.zouine.usa/i-tested-my-own-a-b-testing-app-it-found-a-winner-in-38-of-tests-where-nothing-changed-d4b3a00ac9e6)
 
 Tabs: sample size and power, A/A check, classic test, CUPED, group sequential test (O'Brien-Fleming and Pocock-type Lan-DeMets boundaries), Bayesian probability to be best, segment effects by age, and a Thompson sampling bandit. The sidebar shows the true effect in each simulated sample.
 
