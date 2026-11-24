@@ -12,13 +12,13 @@ Version 1 (June 2025) had bugs I found by testing it against its own simulator, 
 
 | Tab | Pre-registered rule | 2025 app | Version 2 |
 |---|---|---|---|
-| A/A check | fake winners between 3.5% and 6.5% | 37.6% (fail) | see `audit/results_v2.json` |
-| Bayesian | its rule keeps fake winners at or below 5% | 19.4% when checked daily (fail) | |
-| Sequential, O'Brien-Fleming | at most 2.75% one-sided | 3.2% (fail) | |
-| Sequential, Pocock | between 2.0% and 3.0% | 1.6% (fail) | |
-| CUPED, variance | removes at least 10% | 0.3% (fail) | |
-| CUPED, power | within 2 points of a correct analysis | 35.5% vs 44.8% (fail) | |
-| Segments by age | finds the built-in effect 80%+ of the time | 96.6% (pass) | |
+| A/A check | fake winners between 3.5% and 6.5% | 37.6% (fail) | 3.6% (pass) |
+| Bayesian | its rule keeps fake winners at or below 5% | 19.4% when checked daily (fail) | 1.9% deciding once at the end (pass) |
+| Sequential, O'Brien-Fleming | at most 2.75% one-sided | 3.2% (fail) | 2.3% (pass) |
+| Sequential, Pocock | between 2.0% and 3.0% | 1.6% (fail) | 2.5% (pass) |
+| CUPED, variance | removes at least 10% | 0.3% (fail) | 23.2% (pass) |
+| CUPED, power | within 2 points of a correct analysis | 35.5% vs 44.8% (fail) | 42.8% vs 42.8% (pass) |
+| Segments by age | finds the built-in effect 80%+ of the time | 96.6% (pass) | 92.4% (pass) |
 
 What was wrong in version 1:
 - The simulator added an age effect to the treatment group even with the lift set to zero, about +0.5 points on average.

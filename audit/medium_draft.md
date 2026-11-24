@@ -16,7 +16,7 @@ The key idea of the app is a good one, and I still believe it. A simulator knows
 
 ## How I tested it
 
-Before running anything, I wrote down a rule for each tab and committed it to git. I copied the app's own functions without changing them and ran each tab hundreds or thousands of times at its default settings: 20,000 users and a 5% conversion rate. One honest caveat: I had already spotted the first problem while reading the code, and the pre-registration says so.
+Before running anything, I wrote down a rule for each tab and committed it to git. I copied the app's own functions without changing them and ran each tab hundreds or thousands of times at its default settings: 20,000 users and a 5% conversion rate. I had already spotted the first problem while reading the code, and the pre-registration says so.
 
 ![Scorecard](https://raw.githubusercontent.com/ZFayFay/streamlit-experimentation-platform/main/audit/figures/fig0_scorecard.png)
 *Figure 1. The same pre-registered checks on the 2025 app and on version 2.*

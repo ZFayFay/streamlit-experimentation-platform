@@ -51,7 +51,7 @@ ax.set_title('The same pre-registered checks on the 2025 app and on version 2', 
 fig.tight_layout(); fig.savefig(os.path.join(HERE, 'figures', 'fig0_scorecard.png'), dpi=200, bbox_inches='tight')
 
 # ---- fig1: fake winners when nothing changed
-labels = ['A/A check\n(two-sided, 5%)', 'Bayesian tab\n(one-sided, 5%)', "Sequential, O'Brien-Fleming\n(one-sided, 2.5%)"]
+labels = ['A/A check\n(two-sided, 5%)', 'Bayesian tab\n(rule: at most 5%)', "Sequential, O'Brien-Fleming\n(one-sided, 2.5%)"]
 o = [old['H1']['fpr'], old['H2']['fpr_any_look'], old['H3']['of_fpr']]
 n = [new['V1']['fpr'], new['V2']['fpr_recommended_rule'], new['V3']['of_fpr']]
 nominal = [0.05, 0.05, 0.025]
@@ -62,8 +62,9 @@ ax.bar(x + 0.18, np.array(n) * 100, 0.36, color=GREEN, label='Version 2')
 for i, v in enumerate(nominal):
     ax.plot([i - 0.42, i + 0.42], [v * 100] * 2, color='black', ls='--', lw=1)
 for i, (a, b) in enumerate(zip(o, n)):
-    ax.text(i - 0.18, a * 100 + 0.8, pc(a), ha='center', fontsize=9)
-    ax.text(i + 0.18, b * 100 + 0.8, pc(b), ha='center', fontsize=9)
+    for xx, v in [(i - 0.18, a), (i + 0.18, b)]:
+        ax.text(xx, max(v, nominal[i]) * 100 + 0.9, pc(v), ha='center', fontsize=9,
+                bbox=dict(boxstyle='round,pad=0.15', fc='white', ec='none'))
 ax.set_xticks(x); ax.set_xticklabels(labels)
 ax.set_ylabel('Tests that declared a winner (%)')
 ax.set_title('When nothing changed, how often did each tab find a winner? Dashed line: what it should be', loc='left', fontsize=10)
