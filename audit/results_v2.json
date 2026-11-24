@@ -21,5 +21,59 @@
       0.2191
     ],
     "pass": true
+  },
+  "V3": {
+    "runs": 5000,
+    "of_fpr": 0.0228,
+    "of_ci": [
+      0.019,
+      0.0273
+    ],
+    "pocock_fpr": 0.0248,
+    "pocock_ci": [
+      0.0208,
+      0.0295
+    ],
+    "naive_fpr": 0.065,
+    "of_boundaries": [
+      4.877,
+      3.357,
+      2.68,
+      2.29,
+      2.03
+    ],
+    "pocock_boundaries": [
+      2.438,
+      2.429,
+      2.411,
+      2.396,
+      2.387
+    ],
+    "pass_a": true,
+    "pass_b": true
+  },
+  "V4a": {
+    "runs": 200,
+    "mean_variance_reduction": 0.23231210606147448,
+    "pass": true
+  },
+  "V4b": {
+    "runs": 1000,
+    "lift_points": 0.5,
+    "power": {
+      "raw": 0.354,
+      "app": 0.428,
+      "ref": 0.428
+    },
+    "pass": true
+  },
+  "V5": {
+    "runs": 500,
+    "power": 0.924,
+    "ci": [
+      0.8974,
+      0.9441
+    ],
+    "pass": true
   }
 }
